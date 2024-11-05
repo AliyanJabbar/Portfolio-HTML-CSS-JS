@@ -1,6 +1,9 @@
 /* style for whole section */
 .contactMe{
     background: var(--bg-color);
+    animation: appearwithscale ease-in-out;
+    animation-range: entry 0% cover 40%;
+    animation-timeline: view();
 }
 
 /* heading ke part ko different color de rhe hain */

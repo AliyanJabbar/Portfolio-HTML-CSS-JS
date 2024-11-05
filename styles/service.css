@@ -2,6 +2,9 @@
 .services {
   background: var(--bg-color);
   color: black;
+  animation: appearfromleft ease-in-out;
+  animation-range: entry 0% cover 40%;
+  animation-timeline: view();
 }
 
 /* container of all services */

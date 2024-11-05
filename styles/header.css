@@ -14,7 +14,11 @@ header {
 
 /* styling menu icon */
 #menu-icon {
-  font-size: 56px;
+  display: inline-flex;
+  justify-content: start;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 40px;
   color: var(--first-main-color);
   display: none; /* to hide it if the width is normal  */
 }

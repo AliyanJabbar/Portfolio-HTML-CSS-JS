@@ -1,12 +1,18 @@
+// For Typing Effect
 var text = document.getElementById("typing-effect");
-var words = ["Frontend Developer", "Web Developer", "UI/UX Designer", "Next.JS Developer"];
+var words = [
+    "Frontend Developer",
+    "Web Developer",
+    "UI/UX Designer",
+    "Next.JS Developer",
+];
 var wordIndex = 0;
 var charIndex = 0;
 var isdeleting = false; //to control typing/deleting state
 var typeEffect = function () {
     var currentWord = words[wordIndex];
     var currentChar = currentWord.substring(0, charIndex);
-    text ? text.textContent = currentChar : "";
+    text ? (text.textContent = currentChar) : "";
     // it'll move towards the next character of the same word
     if (!isdeleting && charIndex < currentWord.length) {
         charIndex++;
@@ -25,3 +31,11 @@ var typeEffect = function () {
     }
 };
 typeEffect();
+// For Drop Down Menu
+var menuIcon = document.getElementById("menu-icon");
+var navbar = document.querySelector(".navbar");
+menuIcon === null || menuIcon === void 0 ? void 0 : menuIcon.addEventListener("click", function () {
+    console.log("event listener triggered");
+    menuIcon === null || menuIcon === void 0 ? void 0 : menuIcon.classList.toggle("bx-x");
+    navbar === null || navbar === void 0 ? void 0 : navbar.classList.toggle("active");
+});

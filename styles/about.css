@@ -12,14 +12,17 @@
 /* image in about section */
 .about-img {
   position: relative;
-  width: 330px;
-  height: 430px;
+  width: 40%;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:var(--second-main-color);
+  background-color: var(--second-main-color);
   overflow: hidden;
   border-radius: 20px;
+  animation: appearfromleft ease-in-out;
+  animation-range: entry 0% cover 40%;
+  animation-timeline: view();
 }
 
 /* for border animaion on image */
@@ -38,7 +41,7 @@
   content: "";
   position: absolute;
   inset: 10px;
-  background: url('../assets/personal\ pic.png') center/cover;
+  background: url("../assets/personal\ pic.png") center/cover;
   background-color: var(--bg-color);
   border-radius: 20px;
   transition: 0.3s ease-in-out;
@@ -51,14 +54,16 @@
     transform: rotate(360deg);
   }
 }
-.about-img:hover::before{ 
+.about-img:hover::before {
   animation-play-state: paused;
 }
 
 /* about-content style */
-.about-content{
-  /* margin: 0 -50px; */
-  margin-left:-320px ;
+.about-content {
+  margin-left: -320px;
+  animation: appearfromright ease-in-out;
+  animation-range: entry 0% cover 40%;
+  animation-timeline: view();
 }
 /* main heading in about content */
 .about-content h2 {

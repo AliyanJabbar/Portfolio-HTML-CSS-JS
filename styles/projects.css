@@ -27,6 +27,9 @@
   overflow: hidden;
   padding: 10px 15px;
   box-shadow: 0px 0px 7px var(--first-main-color);
+  animation: appearfromright ease-in-out;
+  animation-range: entry 0% cover 40%;
+  animation-timeline: view();
   transition: 0.3s ease-in-out;
 }
 /* hover effect on each project card */

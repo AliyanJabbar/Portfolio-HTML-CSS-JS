@@ -10,6 +10,7 @@
 }
 html {
   overflow-x: hidden;
+  font-size: 100%;
 }
 
 /* making color variables for easy management and maintainablity*/
@@ -37,6 +38,7 @@ body {
   color: var(--text-color);
 }
 
+
 /* default styling for all sections */
 section {
   padding: 50px 10%;
@@ -44,7 +46,7 @@ section {
 }
 
 /* styling heading present in services , project , contact sections */
-.heading{
+.heading {
   color: var(--text-color);
   font-size: 60px;
   font-weight: 800;
@@ -52,6 +54,38 @@ section {
   margin: 50px 0 25px 0;
 }
 
+/* for scroll animation */
+@keyframes appearfromleft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes appearfromright {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+  @keyframes appearwithscale {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 
 /* for vertical scroll bar  */
 ::-webkit-scrollbar {
@@ -61,9 +95,125 @@ section {
   background: linear-gradient(
     180deg,
     var(--first-main-color) 10%,
-    var(--second-main-color) 100%)
+    var(--second-main-color) 100%
+  );
 }
 
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
+}
+
+/* Responsiveness  */
+
+@media (max-width: 1285px) {
+  /* navbar(header) */
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 35%;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 20px;
+    border-left: 2px solid var(--first-main-color);
+    border-bottom: 2px solid var(--first-main-color);
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 23px;
+    margin: 30px 0;
+    color: var(--text-color);
+    width: fit-content;
+  }
+  .navbar a:hover {
+    color: var(--first-main-color);
+  }
+
+  #contact-btn {
+    display: none;
+  }
+
+  /* home section */
+  .home {
+    flex-direction: column-reverse;
+    margin: 70px 0;
+    gap: 50px;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .social-icons {
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-group {
+    align-items: center;
+    justify-content: center;
+  }
+  .image-container {
+    margin: 20px auto 0 auto;
+  }
+
+  /* about section */
+  .about {
+    flex-direction: column;
+  }
+  .about-content {
+    margin: 70px 0;
+    text-align: center;
+  }
+  .about-content h2 {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .about-img {
+    margin: auto;
+    height: 350px;
+  }
+
+  /* contact section */
+  .contactMe form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #menu-icon {
+    width: fit-content;
+    margin-right: 30%;
+  }
+  .logo {
+    font-size: 30px;
+    width: auto;
+  }
+  .navbar {
+    margin-right: 10%;
+  }
+}
+
+@media(max-width:450px){
+  #menu-icon{
+    width: fit-content;
+    margin-right: 60%;
+  }
+  .navbar {
+    margin-right: 30%;
+  }
 }

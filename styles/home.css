@@ -6,6 +6,7 @@
   text-align: center;
   justify-content: center;
   gap: 100px;
+  animation: appearfromleft 2s ease-in-out;
 }
 
 /* home content */
@@ -27,6 +28,7 @@
 .home-content h3 {
   display: inline-block;
   position: relative;
+  text-wrap: nowrap;
   margin: 10px 0;
   font-size: 37px;
   font-weight: 800;
