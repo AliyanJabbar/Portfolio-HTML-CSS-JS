@@ -1,0 +1,83 @@
+/* style for whole projects section */
+.projects {
+  background: var(--second-bg-color);
+}
+
+/* styling for all the projects*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 30px;
+  gap: 50px;
+  place-items: center; /* place-items used in grid display */
+}
+
+/* style for each project card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg-color);
+  border: 2px solid var(--first-main-color);
+  border-radius: 20px;
+  cursor: pointer;
+  gap: 3px;
+  overflow: hidden;
+  padding: 10px 15px;
+  box-shadow: 0px 0px 7px var(--first-main-color);
+  transition: 0.3s ease-in-out;
+}
+/* hover effect on each project card */
+.project-card:hover {
+  box-shadow: 0 0 25px var(--first-main-color), 0 0 50px var(--first-main-color);
+  transform: scale(1.02);
+}
+
+/* styles for image in each project */
+.project-card img {
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* main heading in each project */
+.project-card h3 {
+  font-size: 27px;
+}
+
+/* Made with in each project */
+.project-card h4 {
+  color: var(--first-main-color);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Description in each project */
+.project-card p {
+  font-size: 15px;
+}
+
+/* review project btn in each project */
+.project-btn {
+  background: var(--first-main-color);
+  color: var(--bg-color);
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 12px 17px;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+  text-wrap: nowrap;
+  box-shadow: 0px 0px 10px var(--first-main-color);
+  transition: 0.3s ease-in-out;
+  margin: 20px 0;
+}
+/* hover effect on button in each project card */
+.project-btn:hover {
+  box-shadow: 0px 0px 20px var(--first-main-color);
+  transform: scale(1.05);
+}

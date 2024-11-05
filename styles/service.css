@@ -1,0 +1,65 @@
+/* style for whole services section */
+.services {
+  background: var(--bg-color);
+  color: black;
+}
+
+/* container of all services */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* for responsiveness */
+  text-align: center;
+  gap: 30px;
+}
+
+/* styles for each service card */
+.service-card {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--first-main-color);
+  height: 450px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+/* hover effect on each service card */
+.service-card:hover {
+  background: var(--second-bg-color);
+  color: var(--first-main-color);
+  border: 5px solid var(--first-main-color);
+  transform: scale(1.03);
+}
+
+/* content in each service card */
+.service-info {
+  /* alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  /* font size */
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+/* heading inside each service */
+.service-info h4 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+/* icon present in each service */
+.service-info i {
+  font-size: 50px;
+}
