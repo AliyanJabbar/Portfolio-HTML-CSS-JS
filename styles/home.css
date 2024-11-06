@@ -28,7 +28,7 @@
 .home-content h3 {
   display: inline-block;
   position: relative;
-  text-wrap: nowrap;
+  /* text-wrap: nowrap; */
   margin: 10px 0;
   font-size: 37px;
   font-weight: 800;

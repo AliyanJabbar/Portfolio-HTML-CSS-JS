@@ -187,7 +187,10 @@ section {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 623.5px) {
+  h3 span::after {
+    transform: translateY(7.5px);
+  }
   header {
     padding: 20px 5%;
     display: flex;
